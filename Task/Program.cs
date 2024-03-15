@@ -31,6 +31,7 @@ namespace Task
                 }
                 Console.WriteLine();
             }
+
             Console.WriteLine();
             Console.Write("Введите скорость работы первного('X') садовника (int):");
             int tm1 = Convert.ToInt32(Console.ReadLine());
@@ -40,6 +41,7 @@ namespace Task
 
             ParameterizedThreadStart threadStart = new ParameterizedThreadStart(Gardener2);
             Thread thread = new Thread(threadStart);
+            
             thread.Start(tm2);
             Gardener1(tm1);
 
